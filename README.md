@@ -1,8 +1,14 @@
 ## Attribution
 
-### Images
+### Icons
+
+[hamburger-icon.png](https://www.flaticon.com/free-icons/hamburger)
+
+[close-icon](https://www.flaticon.com/free-icons/close)
 
 [start-button.png](https://www.flaticon.com/free-icons/start-button)
+
+### Images
 
 [pine-forest-background.png](https://www.rawpixel.com/image/6290265/png-background-aesthetic)
 
