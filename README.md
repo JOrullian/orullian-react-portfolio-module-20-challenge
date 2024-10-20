@@ -1,8 +1,8 @@
 ## Attribution
 
-[start-button.png](https://www.flaticon.com/free-icons/start-button)
+### Images
 
-    <a href="https://www.flaticon.com/free-icons/start-button" title="start button icons">Start button icons created by Freepik - Flaticon</a>
+[start-button.png](https://www.flaticon.com/free-icons/start-button)
 
 [pine-forest-background.png](https://www.rawpixel.com/image/6290265/png-background-aesthetic)
 
@@ -25,3 +25,7 @@
 [milky-way-illustration.png](https://www.pexels.com/photo/milky-way-illustration-1169754/)
 
 [sky-and-stars.jpg](https://www.pexels.com/photo/sky-and-starts-1005309/)
+
+### Code
+
+[Mouse move parallax effect](https://www.youtube.com/watch?v=kyq_dQL70cQ)
