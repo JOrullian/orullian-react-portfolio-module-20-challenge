@@ -14,3 +14,29 @@
   justify-content: flex-start;
   height: 100vh;
 }
+
+.offcanvas-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1050; /* Ensures it's above other elements */
+}
+
+.fullscreen-offcanvas {
+  height: 100vh !important;
+  max-height: 100vh !important;
+  background-color: rgba(0, 0, 0, 0.5) !important; /* Opaque transparent background */
+  backdrop-filter: blur(5px); /* Optional: Adds a subtle blur effect */
+  border: none; /* Removes any border */
+  box-shadow: none; /* Removes shadow */
+}
+
+.fullscreen-offcanvas .btn-close {
+  filter: invert(1); /* Makes the close icon white */
+  background-color: transparent; /* Removes any background */
+  border: none; /* Optional: Ensures no border */
+}
+
+.fullscreen-offcanvas .btn-close:hover {
+  filter: invert(1) brightness(0.8); /* Slight dim effect on hover */
+}
