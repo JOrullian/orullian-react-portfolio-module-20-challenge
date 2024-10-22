@@ -15,6 +15,22 @@
   height: 100vh;
 }
 
+#start-logo-icon {
+  background-color: transparent;
+  border: none;
+  height: 60px;
+  filter: invert(1);
+}
+
+.logo-btn {
+  position: fixed;
+  top: 10px;
+  left: 30px;
+  z-index: 1500;
+  background-color: transparent;
+  border: none;
+}
+
 #navigation-menu-icon {
   height: 40px;
   filter: invert(1);
@@ -26,7 +42,7 @@
   position: fixed;
   top: 20px;
   right: 30px;
-  z-index: 1050; /* Ensures it's above other elements */
+  z-index: 1500; /* Ensures it's above other elements */
   background-color: transparent;
   border: none;
 }
@@ -34,7 +50,12 @@
 .fullscreen-offcanvas {
   height: 100vh !important;
   max-height: 100vh !important;
-  background-color: rgba(0, 0, 0, 0.5) !important; /* Opaque transparent background */
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ) !important; /* Opaque transparent background */
   backdrop-filter: blur(5px); /* Optional: Adds a subtle blur effect */
   border: none; /* Removes any border */
   box-shadow: none; /* Removes shadow */

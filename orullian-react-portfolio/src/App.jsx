@@ -1,17 +1,27 @@
 import OffcanvasMenu from "./components/OffcanvasMenu";
-import ParallaxComponent from "./components/ParallaxHeader";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import ParallaxContent from "./components/ParallaxContent";
+import { Button } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
 function App() {
   return (
-  <>
-  <OffcanvasMenu
-    title="My Navigation Menu"
-    content="This is the content of the menu, such as links or options."
-    />
-  <ParallaxComponent />
-  </>
+    <>
+      <Button variant="primary" className="me-2 logo-btn">
+        <img
+          src="/assets/start-button.png"
+          alt="logo icon"
+          id="start-logo-icon"
+        />
+      </Button>
+
+      <OffcanvasMenu
+        title="My Navigation Menu"
+        content="This is the content of the menu, such as links or options."
+      />
+
+      <ParallaxContent />
+    </>
   );
 }
 
