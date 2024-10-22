@@ -1,5 +1,8 @@
 import { useLayoutEffect, useRef, useState } from "react";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
+import ProjectsSection from "./ProjectsSection";
+import AboutMeSection from "./AboutMeSection";
+import ContactSection from "./ContactSection";
 import milky_way_illustration from "../assets/images/milky-way-illustration.jpg";
 import moon from "../assets/images/moon.png";
 import mars from "../assets/images/mars.png";
@@ -60,48 +63,66 @@ function ParallaxComponent() {
   };
 
   useLayoutEffect(() => {
-    const [depth1, depth2, depth3] = calculatePosition(windowCenter.x, windowCenter.y);
-    if (layerRefs[0].current) layerRefs[0].current.style.backgroundPosition = depth1;
-    if (layerRefs[1].current) layerRefs[1].current.style.backgroundPosition = depth2;
-    if (layerRefs[2].current) layerRefs[2].current.style.backgroundPosition = depth3;
+    const [depth1, depth2, depth3] = calculatePosition(
+      windowCenter.x,
+      windowCenter.y
+    );
+    if (layerRefs[0].current)
+      layerRefs[0].current.style.backgroundPosition = depth1;
+    if (layerRefs[1].current)
+      layerRefs[1].current.style.backgroundPosition = depth2;
+    if (layerRefs[2].current)
+      layerRefs[2].current.style.backgroundPosition = depth3;
   }, [windowCenter]);
 
   useLayoutEffect(() => {
     const handleMouseMove = (e) => {
       const [depth1, depth2, depth3] = calculatePosition(e.clientX, e.clientY);
-      if (layerRefs[0].current) layerRefs[0].current.style.backgroundPosition = depth1;
-      if (layerRefs[1].current) layerRefs[1].current.style.backgroundPosition = depth2;
-      if (layerRefs[2].current) layerRefs[2].current.style.backgroundPosition = depth3;
+      if (layerRefs[0].current)
+        layerRefs[0].current.style.backgroundPosition = depth1;
+      if (layerRefs[1].current)
+        layerRefs[1].current.style.backgroundPosition = depth2;
+      if (layerRefs[2].current)
+        layerRefs[2].current.style.backgroundPosition = depth3;
     };
     window.addEventListener("mousemove", handleMouseMove);
     return () => window.removeEventListener("mousemove", handleMouseMove);
   }, [windowCenter]);
 
   return (
-    <div className="parallax" style={{ position: "absolute", width: "100%", height: "100%", overflow: "hidden", backgroundColor: "black" }}>
-      <Parallax pages={4}>
+    <div
+      className="parallax"
+      style={{
+        position: "absolute",
+        width: "100%",
+        height: "100%",
+        overflow: "hidden",
+        backgroundColor: "black",
+      }}
+    >
+      <Parallax pages={6.5}>
         {/* Milky Way Layer */}
         <ParallaxLayer
           offset={parallaxSettings.milkyWay.offset}
           speed={parallaxSettings.milkyWay.speed}
           factor={parallaxSettings.milkyWay.factor}
-          >
-            <div
-              ref={layerRefs[0]}
-              style={{
-                backgroundImage: `
+        >
+          <div
+            ref={layerRefs[0]}
+            style={{
+              backgroundImage: `
                   linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, black 100%), 
                   url(${milky_way_illustration})
                 `,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                backgroundBlendMode: "darken",
-                filter: "brightness(70%)",
-                width: "100%",
-                height: "100%",
-                position: "absolute",
-              }}
-              ></div>
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              backgroundBlendMode: "darken",
+              filter: "brightness(70%)",
+              width: "100%",
+              height: "100%",
+              position: "absolute",
+            }}
+          ></div>
         </ParallaxLayer>
 
         {/* Mars Layer */}
@@ -109,8 +130,8 @@ function ParallaxComponent() {
           offset={parallaxSettings.mars.offset}
           speed={parallaxSettings.mars.speed}
           factor={parallaxSettings.mars.factor}
-          >
-            <div
+        >
+          <div
             ref={layerRefs[1]}
             style={{
               backgroundImage: `url(${mars})`,
@@ -120,9 +141,9 @@ function ParallaxComponent() {
               backgroundBlendMode: "screen",
               width: "100%",
               height: "100%",
-              position: "absolute"
+              position: "absolute",
             }}
-            ></div>
+          ></div>
         </ParallaxLayer>
 
         {/* Moon Layer */}
@@ -130,8 +151,8 @@ function ParallaxComponent() {
           offset={parallaxSettings.moon.offset}
           speed={parallaxSettings.moon.speed}
           factor={parallaxSettings.moon.factor}
-          >
-            <div
+        >
+          <div
             ref={layerRefs[2]}
             style={{
               backgroundImage: `url(${moon})`,
@@ -142,7 +163,8 @@ function ParallaxComponent() {
               width: "100%",
               height: "100%",
               position: "absolute",
-            }}></div>
+            }}
+          ></div>
         </ParallaxLayer>
 
         {/* Treeline Layer */}
@@ -167,7 +189,13 @@ function ParallaxComponent() {
           style={{
             backgroundColor: "black",
           }}
-          ></ParallaxLayer>
+        ></ParallaxLayer>
+
+        <ProjectsSection />
+
+        <AboutMeSection />
+
+        <ContactSection />
       </Parallax>
     </div>
   );

@@ -2,6 +2,7 @@ import { useState } from "react";
 import PropTypes from "prop-types";
 import Button from "react-bootstrap/Button";
 import Offcanvas from "react-bootstrap/Offcanvas";
+import Nav from "react-bootstrap/Nav";
 
 function OffcanvasMenu() {
   const [show, setShow] = useState(false);
@@ -30,17 +31,18 @@ function OffcanvasMenu() {
         className="fullscreen-offcanvas"
       >
         <Offcanvas.Body className="offcanvas-body-centered">
-          <ul className="nav-menu-item" id="nav-menu-projects">
-            Projects
-          </ul>
+            <Nav.Item>
+                <Nav.Link href="/" className="nav-menu-item" id="nav-menu-projects">Projects</Nav.Link>
+            </Nav.Item>
 
-          <ul className="nav-menu-item" id="nav-menu-about-me">
-            About Me
-          </ul>
+            <Nav.Item>
+                <Nav.Link href="/" className="nav-menu-item" id="nav-menu-projects">About Me</Nav.Link>
+            </Nav.Item>
 
-          <ul className="nav-menu-item" id="nav-menu-contact">
-            Contact
-          </ul>
+            <Nav.Item>
+                <Nav.Link href="/" className="nav-menu-item" id="nav-menu-projects">Contact</Nav.Link>
+            </Nav.Item>
+            
         </Offcanvas.Body>
       </Offcanvas>
     </>
