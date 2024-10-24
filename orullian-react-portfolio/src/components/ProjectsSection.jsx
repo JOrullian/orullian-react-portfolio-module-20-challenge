@@ -46,17 +46,21 @@ function ProjectsSection() {
   ]);
 
   return (
-        <ParallaxLayer offset={2.8} speed={0} factor={1} className="projects-section">
+        <ParallaxLayer offset={2.6} speed={0} factor={1} className="projects-section">
           <motion.div
+            id="projects-section"
+            style={{ paddingTop: "5rem"}}
             ref={projectsRef}
             initial={{ opacity: 0, x: -50 }} // Hidden initially
             animate={controls} // Controlled animation
             transition={{ duration: 0.6, ease: "easeOut" }} // Smooth transition
           >
-            <Container className="my-5">
-              <Row>
+            <Container
+              className="my-5 d-flex flex-row justify-content-around">
+              <Row className="d-flex flex-row justify-content-around"
+                style={{ width: "100%"}}>
                 {projects.map((project) => (
-                  <Col key={project.id} md={4} className="mb-4">
+                  <Col key={project.id} md={4} className="mb-4 d-flex justify-content-center">
                     <ProjectCard
                       title={project.title}
                       description={project.description}
