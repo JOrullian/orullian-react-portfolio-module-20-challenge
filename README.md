@@ -8,6 +8,14 @@
 
 [start-button.png](https://www.flaticon.com/free-icons/start-button)
 
+[moon-icon.png](https://www.flaticon.com/free-icons/full-moon)
+
+[linkedin-icon.png](https://www.flaticon.com/free-icons/linkedin)
+
+[github-icon.png](https://www.flaticon.com/free-icons/github)
+
+[twitter-icon.png](https://www.flaticon.com/free-icons/twitter)
+
 ### Images
 
 [pine-forest-background.png](https://www.rawpixel.com/image/6290265/png-background-aesthetic)

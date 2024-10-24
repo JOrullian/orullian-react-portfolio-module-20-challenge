@@ -31,18 +31,76 @@ function OffcanvasMenu() {
         className="fullscreen-offcanvas"
       >
         <Offcanvas.Body className="offcanvas-body-centered">
+          <Nav.Item>
+            <Nav.Link
+              href="#projects-section"
+              className="external-nav-menu-item"
+              id="nav-menu-projects"
+              onClick={handleClose}
+            >
+              Projects
+            </Nav.Link>
+          </Nav.Item>
+
+          <Nav.Item>
+            <Nav.Link
+              href="#about-me-section"
+              className="external-nav-menu-item"
+              id="nav-menu-projects"
+              onClick={handleClose}
+            >
+              About Me
+            </Nav.Link>
+          </Nav.Item>
+
+          <Nav.Item>
+            <Nav.Link
+              href="#contact-section"
+              className="external-nav-menu-item"
+              id="nav-menu-projects"
+              onClick={handleClose}
+            >
+              Contact
+            </Nav.Link>
+          </Nav.Item>
+
+          <div className="external-links">
             <Nav.Item>
-                <Nav.Link href="#projects-section" className="nav-menu-item" id="nav-menu-projects" onClick={handleClose}>Projects</Nav.Link>
+              <Nav.Link
+                href="https://github.com/JOrullian"
+                id="nav-menu-github"
+              >
+                <img
+                  className="external-nav-menu-item"
+                  src="/assets/github-icon.png"
+                  alt="Link to Jedediah's Github profile"
+                />
+              </Nav.Link>
             </Nav.Item>
 
             <Nav.Item>
-                <Nav.Link href="#about-me-section" className="nav-menu-item" id="nav-menu-projects" onClick={handleClose}>About Me</Nav.Link>
+              <Nav.Link
+                href="https://www.linkedin.com/in/jedediah-orullian-1a4b71135/"
+                id="nav-menu-linkedin"
+              >
+                <img
+                  className="external-nav-menu-item"
+                  src="/assets/linkedin-icon.png"
+                  alt="Link to Jedediah's LinkedIn profile"
+                />
+              </Nav.Link>
             </Nav.Item>
 
             <Nav.Item>
-                <Nav.Link href="#contact-section" className="nav-menu-item" id="nav-menu-projects" onClick={handleClose}>Contact</Nav.Link>
+              <Nav.Link href="https://x.com/JOrullian94" id="nav-menu-x">
+                <img
+                  className="external-nav-menu-item"
+                  src="/assets/twitter-icon.png"
+                  alt="Link to Jedediah's X profile"
+                />
+              </Nav.Link>
             </Nav.Item>
-            
+          </div>
         </Offcanvas.Body>
       </Offcanvas>
     </>
