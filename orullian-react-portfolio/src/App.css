@@ -56,9 +56,9 @@
     0,
     0.5
   ) !important; /* Opaque transparent background */
-  backdrop-filter: blur(5px); /* Optional: Adds a subtle blur effect */
-  border: none; /* Removes any border */
-  box-shadow: none; /* Removes shadow */
+  backdrop-filter: blur(5px);
+  border: none;
+  box-shadow: none;
   display: flex;
   justify-content: center;
 }
@@ -85,4 +85,19 @@
   color: white;
   margin: 20px;
   font-size: larger;
+}
+
+.external-links {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  width: 20%;
+  left: 30px;
+  bottom: 30px;
+  justify-content: space-evenly;
+}
+
+.external-nav-menu-item {
+  filter: invert(1);
+  height: 2.5rem;
 }

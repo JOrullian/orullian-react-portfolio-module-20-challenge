@@ -28,7 +28,7 @@ function AboutMeSection() {
 
     
   return (
-    <ParallaxLayer offset={4} speed={0} factor={1}
+    <ParallaxLayer offset={3.4} speed={0} factor={1}
     className="about-me-section">
       <motion.div
         id="about-me-section"
@@ -41,6 +41,18 @@ function AboutMeSection() {
         <Container className="my-5">
           <Row>
             <p>About Me Section</p>
+          </Row>
+
+          <Row className="d-flex justify-content-around">
+            <img 
+              src="/src/assets/images/jed-headshot.png"
+              alt="Headshot of Jedediah Orullian"
+              style={{
+                height: "400px",
+                width: "300px",
+                borderRadius: "20px 70px",
+                padding: "none"
+                }} />
           </Row>
         </Container>
       </motion.div>
