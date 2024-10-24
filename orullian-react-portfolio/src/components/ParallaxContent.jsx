@@ -44,7 +44,7 @@ function ParallaxComponent() {
               milkyWay: { offset: 0, speed: 0.1, factor: 2 },
               mars: { offset: 0, speed: -0.4, factor: 1 },
               moon: { offset: 0, speed: -0.6, factor: 1 },
-              treeline: { offset: 0.7, speed: -0.1, factor: 1.5 },
+              treeline: { offset: 0.7, speed: 0, factor: 1.5 },
             }
       );
     };
@@ -168,6 +168,16 @@ function ParallaxComponent() {
           ></div>
         </ParallaxLayer>
 
+        {/* Coverage Layer to block seeing underneath treeline layer when quickly scrolling up */}
+        <ParallaxLayer
+          offset={parallaxSettings.treeline.offset + 1.3}
+          speed={parallaxSettings.treeline.speed}
+          factor={2.0}
+          style={{
+            backgroundColor: "black",
+          }}
+        ></ParallaxLayer>
+
         {/* Treeline Layer */}
         <ParallaxLayer
           offset={parallaxSettings.treeline.offset}
@@ -179,16 +189,6 @@ function ParallaxComponent() {
             backgroundSize: "cover",
             backgroundPosition: "0% 0%",
             backgroundBlendMode: "multiply",
-          }}
-        ></ParallaxLayer>
-
-        {/* Coverage Layer to block seeing underneath treeline layer when quickly scrolling up */}
-        <ParallaxLayer
-          offset={parallaxSettings.treeline.offset + 1.7}
-          speed={parallaxSettings.treeline.speed}
-          factor={1.0}
-          style={{
-            backgroundColor: "black",
           }}
         ></ParallaxLayer>
 
