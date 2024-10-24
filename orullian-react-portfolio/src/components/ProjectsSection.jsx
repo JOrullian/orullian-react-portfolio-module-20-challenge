@@ -30,19 +30,42 @@ function ProjectsSection() {
   const [projects] = useState([
     {
       id: 1,
-      title: "Project 1",
+      title: "QuickMatch",
       description: "This is the first project description",
+      githubLink: "https://github.com/JOrullian/group-1-project-2",
+      deployedLink: "https://quickmatch.onrender.com"
     },
     {
       id: 2,
-      title: "Project 2",
+      title: "Pixel Chess",
       description: "This is the second project description",
     },
     {
       id: 3,
-      title: "Project 3",
+      title: "Text Editor PWA",
       description: "This is the third project description",
+      githubLink: "https://github.com/JOrullian/orullian-pwa-text-editor-module-19-challenge",
+      deployedLink: "https://orullian-pwa-text-editor-module-19.onrender.com"
     },
+    {
+      id: 4,
+      title: "SQL Employee Tracker",
+      description: "This is the third project description",
+      githubLink: "https://github.com/JOrullian/orullian-sql-employee-tracker-module-12-challenge"
+    },
+    {
+      id: 5,
+      title: "MVC Tech Blog",
+      description: "This is the third project description",
+      githubLink: "https://github.com/JOrullian/orullian-mvc-tech-blog-module-14-challenge",
+      deployedLink: "https://orullian-mvc-tech-blog-module-14.onrender.com"
+    },
+    {
+      id: 6,
+      title: "Social Network API",
+      description: "This is the third project description",
+      githubLink: "https://github.com/JOrullian/orullian-social-network-api-module-18-challenge"
+    }    
   ]);
 
   return (
