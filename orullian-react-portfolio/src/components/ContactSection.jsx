@@ -31,6 +31,8 @@ function ContactSection() {
     <ParallaxLayer offset={5} speed={0} factor={1}
     className="contact-section">
       <motion.div
+        id="contact-section"
+        style={{ paddingTop: "5rem"}}
         ref={contactRef}
         initial={{ opacity: 0, x: -50 }} // Hidden initially
         animate={controls} // Controlled animation

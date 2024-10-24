@@ -13,7 +13,7 @@ function OffcanvasMenu() {
   return (
     <>
       <Button
-        variant="primary"
+        variant="outline-secondary"
         onClick={show ? handleClose : handleShow}
         className="me-2 offcanvas-btn"
       >
@@ -32,15 +32,15 @@ function OffcanvasMenu() {
       >
         <Offcanvas.Body className="offcanvas-body-centered">
             <Nav.Item>
-                <Nav.Link href="/" className="nav-menu-item" id="nav-menu-projects">Projects</Nav.Link>
+                <Nav.Link href="#projects-section" className="nav-menu-item" id="nav-menu-projects" onClick={handleClose}>Projects</Nav.Link>
             </Nav.Item>
 
             <Nav.Item>
-                <Nav.Link href="/" className="nav-menu-item" id="nav-menu-projects">About Me</Nav.Link>
+                <Nav.Link href="#about-me-section" className="nav-menu-item" id="nav-menu-projects" onClick={handleClose}>About Me</Nav.Link>
             </Nav.Item>
 
             <Nav.Item>
-                <Nav.Link href="/" className="nav-menu-item" id="nav-menu-projects">Contact</Nav.Link>
+                <Nav.Link href="#contact-section" className="nav-menu-item" id="nav-menu-projects" onClick={handleClose}>Contact</Nav.Link>
             </Nav.Item>
             
         </Offcanvas.Body>

@@ -108,6 +108,7 @@ function ParallaxComponent() {
           factor={parallaxSettings.milkyWay.factor}
         >
           <div
+            id="home"
             ref={layerRefs[0]}
             style={{
               backgroundImage: `

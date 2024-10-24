@@ -35,3 +35,12 @@
 ### Code
 
 [Mouse move parallax effect](https://www.youtube.com/watch?v=kyq_dQL70cQ)
+
+## Technologies Used
+
+- react
+- react-spring
+- framer-motion
+- react-bootstrap
+- eslint
+- vite

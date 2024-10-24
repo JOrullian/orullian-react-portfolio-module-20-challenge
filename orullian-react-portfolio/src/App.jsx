@@ -7,7 +7,10 @@ import "./App.css";
 function App() {
   return (
     <>
-      <Button variant="primary" className="me-2 logo-btn">
+      <Button
+        href="#home"
+        variant="outline-secondary"
+        className="me-2 logo-btn">
         <img
           src="/assets/start-button.png"
           alt="logo icon"
