@@ -31,7 +31,7 @@ function ProjectsSection() {
     {
       id: 1,
       title: "QuickMatch",
-      description: "This is the first project description",
+      description: "App for users to find and create local sporting events",
       githubLink: "https://github.com/JOrullian/group-1-project-2",
       deployedLink: "https://quickmatch.onrender.com",
       appImage: "/src/assets/images/quickmatch.png",
@@ -39,13 +39,13 @@ function ProjectsSection() {
     {
       id: 2,
       title: "Pixel Chess",
-      description: "This is the second project description",
+      description: "Chess recreated in Godot using my own pixel art assets",
       appImage: "/src/assets/images/pixel_chess.png",
     },
     {
       id: 3,
       title: "Text Editor PWA",
-      description: "This is the third project description",
+      description: "Simple text editor that can be installed and used offline",
       githubLink:
         "https://github.com/JOrullian/orullian-pwa-text-editor-module-19-challenge",
       deployedLink: "https://orullian-pwa-text-editor-module-19.onrender.com",
@@ -54,7 +54,7 @@ function ProjectsSection() {
     {
       id: 4,
       title: "SQL Employee Tracker",
-      description: "This is the third project description",
+      description: "Employee database that users can access from the CLI",
       githubLink:
         "https://github.com/JOrullian/orullian-sql-employee-tracker-module-12-challenge",
       appImage: "/src/assets/images/sql-employee-tracker.png",
@@ -62,7 +62,7 @@ function ProjectsSection() {
     {
       id: 5,
       title: "MVC Tech Blog",
-      description: "This is the third project description",
+      description: "Blog website where users can make and comment on posts",
       githubLink:
         "https://github.com/JOrullian/orullian-mvc-tech-blog-module-14-challenge",
       deployedLink: "https://orullian-mvc-tech-blog-module-14.onrender.com",
@@ -71,7 +71,7 @@ function ProjectsSection() {
     {
       id: 6,
       title: "Social Network API",
-      description: "This is the third project description",
+      description: "MongoDB database structured for a social network application",
       githubLink:
         "https://github.com/JOrullian/orullian-social-network-api-module-18-challenge",
       appImage: "/src/assets/images/social-network-api.png",

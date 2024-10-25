@@ -104,9 +104,12 @@
 }
 
 .project-card-body {
+  border-radius: 5%;
   transition: background-color 0.3s ease-in-out;
+  color: white;
+  z-index: 500;
 }
 
 .project-card-body:hover {
-  background-color: white;
+  background-color: grey;
 }

@@ -28,7 +28,7 @@ function ResumeSection() {
 
     
   return (
-    <ParallaxLayer offset={4.5} speed={0} factor={1}
+    <ParallaxLayer offset={5.2} speed={0} factor={1}
     className="resume-section">
       <motion.div
         id="resume-section"
