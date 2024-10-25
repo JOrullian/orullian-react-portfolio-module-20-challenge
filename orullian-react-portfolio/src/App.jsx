@@ -1,6 +1,5 @@
 import OffcanvasMenu from "./components/OffcanvasMenu";
 import ParallaxContent from "./components/ParallaxContent";
-import ScrollIndicator from "./components/ui/ScrollIndicator";
 import { Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";

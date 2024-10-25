@@ -3,8 +3,6 @@ import PropTypes from "prop-types";
 import Button from "react-bootstrap/Button";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import Nav from "react-bootstrap/Nav";
-import { Element, Link } from "react-scroll";
-
 
 function OffcanvasMenu() {
   const [show, setShow] = useState(false);
@@ -101,6 +99,16 @@ function OffcanvasMenu() {
                   className="external-nav-menu-item"
                   src="/assets/twitter-icon.png"
                   alt="Link to Jedediah's X profile"
+                />
+              </Nav.Link>
+            </Nav.Item>
+
+            <Nav.Item>
+              <Nav.Link href="https://open.spotify.com/user/22dhstansphs5w6qooxt2xvma?si=7cd2c8c649704ec4" id="nav-menu-spotify">
+                <img
+                  className="external-nav-menu-item"
+                  src="/assets/spotify-icon.png"
+                  alt="Link to Jedediah's spotify profile"
                 />
               </Nav.Link>
             </Nav.Item>

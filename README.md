@@ -16,6 +16,8 @@
 
 [twitter-icon.png](https://www.flaticon.com/free-icons/twitter)
 
+[spotify-icon.png](https://www.flaticon.com/free-icons/brands-and-logotypes)
+
 ### Images
 
 [pine-forest-background.png](https://www.rawpixel.com/image/6290265/png-background-aesthetic)
