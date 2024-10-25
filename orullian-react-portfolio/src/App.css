@@ -3,6 +3,7 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  scroll-behavior: smooth;
 }
 
 .parallax {
@@ -100,4 +101,12 @@
 .external-nav-menu-item {
   filter: invert(1);
   height: 2.5rem;
+}
+
+.project-card-body {
+  transition: background-color 0.3s ease-in-out;
+}
+
+.project-card-body:hover {
+  background-color: white;
 }

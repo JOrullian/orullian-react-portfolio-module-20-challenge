@@ -1,8 +1,10 @@
 import { useLayoutEffect, useRef, useState } from "react";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
+import ScrollIndicator from "./ui/ScrollIndicator";
 import ProjectsSection from "./ProjectsSection";
 import AboutMeSection from "./AboutMeSection";
 import ContactSection from "./ContactSection";
+import ResumeSection from "./ResumeSection";
 import milky_way_illustration from "../assets/images/milky-way-illustration.jpg";
 import moon from "../assets/images/moon.png";
 import mars from "../assets/images/mars.png";
@@ -192,11 +194,16 @@ function ParallaxComponent() {
           }}
         ></ParallaxLayer>
 
+        <ScrollIndicator />
+
         <ProjectsSection />
 
         <AboutMeSection />
 
+        <ResumeSection />
+
         <ContactSection />
+        
       </Parallax>
     </div>
   );

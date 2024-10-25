@@ -3,6 +3,8 @@ import PropTypes from "prop-types";
 import Button from "react-bootstrap/Button";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import Nav from "react-bootstrap/Nav";
+import { Element, Link } from "react-scroll";
+
 
 function OffcanvasMenu() {
   const [show, setShow] = useState(false);
@@ -29,7 +31,9 @@ function OffcanvasMenu() {
         onHide={handleClose}
         placement="top"
         className="fullscreen-offcanvas"
+        scroll={true}
       >
+
         <Offcanvas.Body className="offcanvas-body-centered">
           <Nav.Item>
             <Nav.Link

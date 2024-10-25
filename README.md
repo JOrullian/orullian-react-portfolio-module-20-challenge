@@ -44,6 +44,8 @@
 
 [Mouse move parallax effect](https://www.youtube.com/watch?v=kyq_dQL70cQ)
 
+[Scroll indicator animation](https://www.youtube.com/watch?v=330XEY_mock)
+
 ## Technologies Used
 
 - react
