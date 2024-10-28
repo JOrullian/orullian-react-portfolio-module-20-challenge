@@ -103,7 +103,7 @@ function ParallaxComponent() {
         backgroundColor: "black",
       }}
     >
-      <Parallax pages={7}>
+      <Parallax pages={7.1}>
         {/* Milky Way Layer */}
         <ParallaxLayer
           offset={parallaxSettings.milkyWay.offset}

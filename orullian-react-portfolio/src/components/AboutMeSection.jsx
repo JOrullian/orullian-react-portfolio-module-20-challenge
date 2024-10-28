@@ -35,14 +35,14 @@ function AboutMeSection() {
 
   return (
     <ParallaxLayer
-      offset={4.2}
+      offset={4.3}
       speed={0}
       factor={1}
       className="about-me-section"
     >
       <motion.div
         id="about-me-section"
-        style={{ paddingTop: "5rem" }}
+        style={{ paddingTop: "1rem" }}
         ref={aboutMeRef}
         initial={{ opacity: 0, x: -50 }} // Hidden initially
         animate={controls} // Controlled animation

@@ -31,10 +31,10 @@ function ContactSection() {
   }, [controls]);
 
   return (
-    <ParallaxLayer offset={6} speed={0} factor={1} className="contact-section">
+    <ParallaxLayer offset={6.3} speed={0} factor={1} className="contact-section">
       <motion.div
         id="contact-section"
-        style={{ paddingTop: "5rem" }}
+        style={{ paddingTop: "1rem" }}
         ref={contactRef}
         initial={{ opacity: 0, x: -50 }} // Start hidden and off-screen
         animate={controls} // Animation control
