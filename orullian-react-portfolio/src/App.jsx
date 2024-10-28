@@ -1,4 +1,4 @@
-import OffcanvasMenu from "./components/OffcanvasMenu";
+import OffcanvasMenu from "./components/ui/OffcanvasMenu";
 import ParallaxContent from "./components/ParallaxContent";
 import { Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";

@@ -5,10 +5,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-end;
-  height: 88vh;
+  justify-content: center;
   background-color: transparent;
   cursor: pointer;
+  width: auto;
+  height: auto;
 }
 
 .mouse {
@@ -49,12 +50,14 @@
 }
 
 .text {
-  margin-top: 20px;
+  margin-top: 10px;
   letter-spacing: 12px;
   color: #fff;
   text-indent: 12px;
   animation: colorText 5s ease-out infinite, nudgeText 5s ease-out infinite;
+  text-align: center;
 }
+
 
 /* Animations */
 @keyframes colorSlide {
