@@ -8,6 +8,7 @@ function ContactSection() {
   const controls = useAnimation();
   const contactRef = useRef(null);
 
+  // Start animations only when the section becomes visible
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -17,11 +18,13 @@ function ContactSection() {
           controls.start({ opacity: 0, x: -50 }); // Reset when out of view
         }
       },
-      { threshold: 0.3 } // Trigger when 10% of the section is visible
+      { threshold: 0.3 } // Trigger when 30% of the section is visible
     );
 
+    // Observe the contact section
     if (contactRef.current) observer.observe(contactRef.current);
 
+    // Cleanup observer when component unmounts
     return () => {
       if (contactRef.current) observer.unobserve(contactRef.current);
     };
@@ -33,8 +36,8 @@ function ContactSection() {
         id="contact-section"
         style={{ paddingTop: "5rem" }}
         ref={contactRef}
-        initial={{ opacity: 0, x: -50 }} // Hidden initially
-        animate={controls} // Controlled animation
+        initial={{ opacity: 0, x: -50 }} // Start hidden and off-screen
+        animate={controls} // Animation control
         transition={{ duration: 0.6, ease: "easeOut" }} // Smooth transition
       >
         <Container className="my-5">

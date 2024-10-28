@@ -57,6 +57,17 @@ function OffcanvasMenu() {
 
           <Nav.Item>
             <Nav.Link
+              href="#resume-section"
+              className="external-nav-menu-item"
+              id="nav-menu-resume"
+              onClick={handleClose}
+            >
+              Resume
+            </Nav.Link>
+          </Nav.Item>
+
+          <Nav.Item>
+            <Nav.Link
               href="#contact-section"
               className="external-nav-menu-item"
               id="nav-menu-projects"
