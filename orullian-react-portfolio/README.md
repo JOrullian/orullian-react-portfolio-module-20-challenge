@@ -18,6 +18,10 @@
 
 [spotify-icon.png](https://www.flaticon.com/free-icons/brands-and-logotypes)
 
+[react-icon.png](https://www.flaticon.com/free-icons/react)
+
+[node-icon.png](https://www.flaticon.com/free-icons/nodejs)
+
 ### Images
 
 [pine-forest-background.png](https://www.rawpixel.com/image/6290265/png-background-aesthetic)
