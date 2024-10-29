@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import { useAnimation, motion } from "framer-motion";
-import { ParallaxLayer } from "@react-spring/parallax";
+import './Header.css'; // Import the CSS file
 
 function Header() {
   const controls = useAnimation();
@@ -26,7 +26,6 @@ function Header() {
   }, [controls]);
 
   return (
-    <ParallaxLayer>
       <motion.div
         ref={headerRef}
         initial={{ opacity: 0, x: 50 }} // Start hidden to the right
@@ -36,13 +35,12 @@ function Header() {
           position: "absolute",
           right: "10%",
           top: "33%",
-          textAlign: "right", // Align text to the right within the container
+          textAlign: "right", // Align text to the right in the container
         }}
       >
-        <h1 style={{ color: "white", margin: 0, marginBottom: "5px", fontSize: "500%" }}>Jedediah</h1>
-        <h1 style={{ color: "white", margin: 0, fontSize: "500%" }}>Orullian</h1>
+        <h1 className="header-title">Jedediah</h1>
+        <h1 className="header-title">Orullian</h1>
       </motion.div>
-    </ParallaxLayer>
   );
 }
 

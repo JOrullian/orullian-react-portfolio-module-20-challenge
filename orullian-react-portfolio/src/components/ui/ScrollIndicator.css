@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Cabin");
 
+/* Scroll Prompt Container */
 .scroll-prompt {
   pointer-events: auto;
   display: flex;
@@ -12,17 +13,23 @@
   height: auto;
 }
 
+/* Mouse Container */
 .mouse {
   width: 52px;
   height: 88px;
   position: relative;
-  background: #4e5559
-    linear-gradient(transparent 0%, transparent 50%, #ffffff 50%, #ffffff 100%);
+  background: #4e5559 linear-gradient(
+    transparent 0%,
+    transparent 50%,
+    #ffffff 50%,
+    #ffffff 100%
+  );
   background-size: 100% 200%;
   border-radius: 100px;
   animation: colorSlide 5s linear infinite, nudgeMouse 5s ease-out infinite;
 }
 
+/* Inner Elements of the Mouse */
 .mouse:before,
 .mouse:after {
   content: "";
@@ -49,15 +56,84 @@
   animation: trackBallSlide 5s linear infinite;
 }
 
+/* Text Styling */
 .text {
   margin-top: 10px;
   letter-spacing: 12px;
   color: #fff;
   text-indent: 12px;
-  animation: colorText 5s ease-out infinite, nudgeText 5s ease-out infinite;
   text-align: center;
+  animation: colorText 5s ease-out infinite, nudgeText 5s ease-out infinite;
 }
 
+/* Desktop (1440px and below) */
+@media (max-width: 1440px) {
+  .mouse {
+    width: 48px;
+    height: 80px;
+  }
+
+  .mouse:before {
+    width: 42px;
+    height: 76px;
+  }
+
+  .mouse:after {
+    width: 8px;
+    height: 8px;
+  }
+
+  .text {
+    font-size: 1.5rem;
+    letter-spacing: 10px;
+  }
+}
+
+/* Tablet (768px and below) */
+@media (max-width: 768px) {
+  .mouse {
+    width: 40px;
+    height: 70px;
+  }
+
+  .mouse:before {
+    width: 36px;
+    height: 66px;
+  }
+
+  .mouse:after {
+    width: 6px;
+    height: 6px;
+  }
+
+  .text {
+    font-size: 1.2rem;
+    letter-spacing: 8px;
+  }
+}
+
+/* Mobile (480px and below) */
+@media (max-width: 480px) {
+  .mouse {
+    width: 30px;
+    height: 52px;
+  }
+
+  .mouse:before {
+    width: 26px;
+    height: 48px;
+  }
+
+  .mouse:after {
+    width: 4px;
+    height: 4px;
+  }
+
+  .text {
+    font-size: 1rem;
+    letter-spacing: 5px;
+  }
+}
 
 /* Animations */
 @keyframes colorSlide {

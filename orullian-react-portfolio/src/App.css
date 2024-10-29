@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -43,7 +47,7 @@
   position: fixed;
   top: 20px;
   right: 30px;
-  z-index: 1500; /* Ensures it's above other elements */
+  z-index: 1500;
   background-color: transparent;
   border: none;
 }
@@ -65,9 +69,9 @@
 }
 
 .fullscreen-offcanvas .btn-close {
-  filter: invert(1); /* Makes the close icon white */
-  background-color: transparent; /* Removes any background */
-  border: none; /* Optional: Ensures no border */
+  filter: invert(1);
+  background-color: transparent;
+  border: none;
 }
 
 .fullscreen-offcanvas .btn-close:hover {
@@ -82,10 +86,33 @@
   height: 100%;
 }
 
-.nav-menu-item {
-  color: white;
-  margin: 20px;
-  font-size: larger;
+.internal-nav-menu-item {
+  position: relative;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  text-decoration: none;
+  color: #6c757d;
+  transition: color 0.3s ease-in-out;
+}
+
+.internal-nav-menu-item.active {
+  color: green;
+  font-weight: bold;
+}
+
+.internal-nav-menu-item::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: green;
+  transition: width 0.4s ease-in-out;
+}
+
+.internal-nav-menu-item.active::after {
+  width: 100%;
 }
 
 .external-links {
@@ -112,4 +139,33 @@
 
 .project-card-body:hover {
   background-color: grey;
+}
+
+.project-card {
+  width: 18rem;
+}
+
+@media (max-width: 768px) {
+  .project-card {
+    width: 15rem; /* Smaller cards on tablets */
+  }
+}
+
+@media (max-width: 576px) {
+  .project-card {
+    width: 12rem; /* Smaller cards on phones */
+    font-size: 10px;
+  }
+
+  .card-title {
+    font-size: 14px;
+  }
+
+  .github-btn {
+    font-size: 10px;
+  }
+
+  .deployed-btn {
+    font-size: 10px;
+  }
 }

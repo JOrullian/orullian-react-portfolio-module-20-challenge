@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import OffcanvasMenu from "./components/ui/OffcanvasMenu";
 import ParallaxContent from "./components/ParallaxContent";
 import { Button } from "react-bootstrap";
@@ -5,9 +6,13 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
 function App() {
+  useEffect(() => {
+    // Automatically scroll to #home when the app loads or refreshes
+    window.location.hash = "#home";
+  }, []);
+
   return (
     <>
-    
       <Button
         href="#home"
         variant="outline-secondary"
@@ -26,7 +31,6 @@ function App() {
       />
 
       <ParallaxContent />
-      
     </>
   );
 }

@@ -1,7 +1,6 @@
 import { useEffect, useRef } from "react";
 import { useAnimation, motion } from "framer-motion";
 import { Container, Row } from "react-bootstrap";
-import { ParallaxLayer } from "@react-spring/parallax";
 
 function AboutMeSection() {
   const controls = useAnimation();
@@ -34,12 +33,7 @@ function AboutMeSection() {
   }, [controls]);
 
   return (
-    <ParallaxLayer
-      offset={4.3}
-      speed={0}
-      factor={1}
-      className="about-me-section"
-    >
+
       <motion.div
         id="about-me-section"
         style={{ paddingTop: "1rem" }}
@@ -59,7 +53,7 @@ function AboutMeSection() {
               </h2>
               <p style={{ color: "white", textAlign: "start", fontSize: "large", textIndent: "20px" }}>
                 My name is Jedediah and I am currently building full stack
-                applications as a freelance developer. I spend my spare either
+                applications as a freelance developer. I spend my spare time either
                 learning to develop video games using Godot or creating music on
                 my Telecaster.</p>
 
@@ -81,7 +75,6 @@ function AboutMeSection() {
           </Row>
         </Container>
       </motion.div>
-    </ParallaxLayer>
   );
 }
 

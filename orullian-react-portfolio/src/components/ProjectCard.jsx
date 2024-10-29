@@ -10,7 +10,7 @@ function ProjectCard({
   appImage,
 }) {
   return (
-    <Card style={{ width: "18rem", backgroundColor: "transparent" }}>
+    <Card className="project-card" style={{ backgroundColor: "transparent" }}>
       <Card.Body className="project-card-body d-flex flex-column justify-content-between">
         <Card.Img
           variant="top"
@@ -19,8 +19,9 @@ function ProjectCard({
         />
         <Card.Title style={{ marginTop: "0.5rem" }}>{title}</Card.Title>
         <Card.Text>{description}</Card.Text>
-        {githubLink ? (
+        {githubLink && (
           <Button
+            className="github-btn"
             variant="primary"
             href={githubLink}
             style={{
@@ -30,12 +31,11 @@ function ProjectCard({
           >
             Github Repo
           </Button>
-        ) : (
-          <div style={{ width: "100px", height: "38px" }}></div>
         )}
-        <div className="gap" style={{height: "10px"}}></div>
-        {deployedLink ? (
+        <div className="gap" style={{ height: "10px" }}></div>
+        {deployedLink && (
           <Button
+          className="deployed-btn"
             variant="primary"
             href={deployedLink}
             style={{
@@ -45,8 +45,6 @@ function ProjectCard({
           >
             Deployed Page
           </Button>
-        ) : (
-          <div style={{ width: "100px", height: "38px" }}></div>
         )}
       </Card.Body>
     </Card>

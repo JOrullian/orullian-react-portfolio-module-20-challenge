@@ -6,6 +6,7 @@ import AboutMeSection from "./AboutMeSection";
 import ContactSection from "./ContactSection";
 import ResumeSection from "./ResumeSection";
 import Header from "./Header";
+import Footer from "./Footer";
 import milky_way_illustration from "../assets/images/milky-way-illustration.jpg";
 import moon from "../assets/images/moon.png";
 import mars from "../assets/images/mars.png";
@@ -15,10 +16,17 @@ function ParallaxComponent() {
   const layerRefs = [useRef(null), useRef(null), useRef(null)];
   const [windowCenter, setWindowCenter] = useState({ x: 0, y: 0 });
   const [parallaxSettings, setParallaxSettings] = useState({
+    parallaxOverall: { pages: 7.9 },
     milkyWay: { offset: 0, speed: 0.1, factor: 2 },
     mars: { offset: 0, speed: -0.4, factor: 1 },
     moon: { offset: 0, speed: -0.6, factor: 1 },
     treeline: { offset: 0.7, speed: -0.1, factor: 1.5 },
+    scrollIndicator: { offset: 0.05, speed: 0, factor: 0.2 },
+    projectsSection: { offset: 2.3, speed: 0, factor: 1 },
+    aboutMeSection: { offset: 4.3, speed: 0, factor: 1 },
+    resumeSection: { offset: 5.2, speed: 0, factor: 1 },
+    contactSection: { offset: 6.9, speed: 0, factor: 1 },
+    footer: { offset: 7.7, speed: 0, factor: 0.2 },
   });
 
   useLayoutEffect(() => {
@@ -35,22 +43,51 @@ function ParallaxComponent() {
 
   useLayoutEffect(() => {
     const updateParallaxSettings = () => {
-      setParallaxSettings(
-        window.innerWidth < 768
-          ? {
-              milkyWay: { offset: 0, speed: 0.2, factor: 1.5 },
-              mars: { offset: 0, speed: -0.2, factor: 1 },
-              moon: { offset: 0, speed: -0.4, factor: 0.8 },
-              treeline: { offset: 0.3, speed: -0.1, factor: 1 },
-            }
-          : {
-              milkyWay: { offset: 0, speed: 0.1, factor: 2 },
-              mars: { offset: 0, speed: -0.4, factor: 1 },
-              moon: { offset: 0, speed: -0.6, factor: 1 },
-              treeline: { offset: 0.7, speed: 0, factor: 1.5 },
-            }
-      );
+      if (window.innerWidth < 426) {
+        setParallaxSettings({
+          parallaxOverall: { pages: 7.9 },
+          milkyWay: { offset: 0, speed: 0.3, factor: 1.2 },
+          mars: { offset: 0, speed: -0.1, factor: 0.8 },
+          moon: { offset: 0, speed: -0.2, factor: 0.6 },
+          treeline: { offset: 0.3, speed: 0, factor: 0.8 },
+          scrollIndicator: { offset: 0.05, speed: 0, factor: 0.2 },
+          projectsSection: { offset: 1.3, speed: 0, factor: 1 },
+          aboutMeSection: { offset: 4.5, speed: 0, factor: 1 },
+          resumeSection: { offset: 5, speed: 0, factor: 1 },
+          contactSection: { offset: 6.5, speed: 0, factor: 1 },
+          footer: { offset: 7.5, speed: 0, factor: 0.2 },
+        });
+      } else if (window.innerWidth < 768) {
+        setParallaxSettings({
+          parallaxOverall: { pages: 7.9 },
+          milkyWay: { offset: 0, speed: 0.2, factor: 1.5 },
+          mars: { offset: 0, speed: -0.2, factor: 1 },
+          moon: { offset: 0, speed: -0.4, factor: 0.8 },
+          treeline: { offset: 0.3, speed: -0.1, factor: 1 },
+          scrollIndicator: { offset: 0.05, speed: 0, factor: 0.2 },
+          projectsSection: { offset: 1.4, speed: 0, factor: 1 },
+          aboutMeSection: { offset: 4.1, speed: 0, factor: 1 },
+          resumeSection: { offset: 5.1, speed: 0, factor: 1 },
+          contactSection: { offset: 6.9, speed: 0, factor: 1 },
+          footer: { offset: 7.7, speed: 0, factor: 0.2 },
+        });
+      } else {
+        setParallaxSettings({
+          parallaxOverall: { pages: 7.9 },
+          milkyWay: { offset: 0, speed: 0.1, factor: 2 },
+          mars: { offset: 0, speed: -0.4, factor: 1 },
+          moon: { offset: 0, speed: -0.6, factor: 1 },
+          treeline: { offset: 0.7, speed: 0, factor: 1.5 },
+          scrollIndicator: { offset: 0.05, speed: 0, factor: 0.2 },
+          projectsSection: { offset: 2.3, speed: 0, factor: 1 },
+          aboutMeSection: { offset: 4.3, speed: 0, factor: 1 },
+          resumeSection: { offset: 5.2, speed: 0, factor: 1 },
+          contactSection: { offset: 6.9, speed: 0, factor: 1 },
+          footer: { offset: 7.7, speed: 0, factor: 0.2 },
+        });
+      }
     };
+
     updateParallaxSettings();
     window.addEventListener("resize", updateParallaxSettings);
     return () => window.removeEventListener("resize", updateParallaxSettings);
@@ -103,7 +140,7 @@ function ParallaxComponent() {
         backgroundColor: "black",
       }}
     >
-      <Parallax pages={7.1}>
+      <Parallax pages={parallaxSettings.parallaxOverall.pages}>
         {/* Milky Way Layer */}
         <ParallaxLayer
           offset={parallaxSettings.milkyWay.offset}
@@ -195,17 +232,69 @@ function ParallaxComponent() {
           }}
         ></ParallaxLayer>
 
-        <Header />
+        <ParallaxLayer>
+          <Header />
+        </ParallaxLayer>
 
-        <ScrollIndicator />
+        <ParallaxLayer
+          offset={parallaxSettings.scrollIndicator.offset}
+          speed={parallaxSettings.scrollIndicator.speed}
+          factor={parallaxSettings.scrollIndicator.factor}
+          className="scroll-indicator-section"
+        >
+          <ScrollIndicator />
+        </ParallaxLayer>
 
-        <ProjectsSection />
+        <ParallaxLayer
+          offset={parallaxSettings.projectsSection.offset}
+          speed={parallaxSettings.projectsSection.speed}
+          factor={parallaxSettings.projectsSection.factor}
+          className="projects-section"
+        >
+          <ProjectsSection />
+        </ParallaxLayer>
 
-        <AboutMeSection />
+        <ParallaxLayer
+          offset={parallaxSettings.aboutMeSection.offset}
+          speed={parallaxSettings.aboutMeSection.speed}
+          factor={parallaxSettings.aboutMeSection.factor}
+          className="about-me-section"
+        >
+          <AboutMeSection />
+        </ParallaxLayer>
 
-        <ResumeSection />
+        <ParallaxLayer
+          offset={parallaxSettings.resumeSection.offset}
+          speed={parallaxSettings.resumeSection.speed}
+          factor={parallaxSettings.resumeSection.factor}
+          className="resume-section"
+        >
+          <ResumeSection />
+        </ParallaxLayer>
 
-        <ContactSection />
+        <ParallaxLayer
+          offset={parallaxSettings.contactSection.offset}
+          speed={parallaxSettings.contactSection.speed}
+          factor={parallaxSettings.contactSection.factor}
+          className="contact-section"
+        >
+          <ContactSection />
+        </ParallaxLayer>
+
+        <ParallaxLayer
+          offset={parallaxSettings.footer.offset}
+          speed={parallaxSettings.footer.speed}
+          factor={parallaxSettings.footer.factor}
+          style={{
+            backgroundColor: "black", // Light background for the footer
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "end",
+            color: "#6c757d", // Secondary text color
+          }}
+        >
+          <Footer />
+        </ParallaxLayer>
       </Parallax>
     </div>
   );

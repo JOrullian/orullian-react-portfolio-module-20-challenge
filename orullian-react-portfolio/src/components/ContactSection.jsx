@@ -1,7 +1,6 @@
 import { useEffect, useRef } from "react";
 import { useAnimation, motion } from "framer-motion";
-import { Container, Row } from "react-bootstrap";
-import { ParallaxLayer } from "@react-spring/parallax";
+import { Container } from "react-bootstrap";
 import ContactForm from "./ContactForm";
 
 function ContactSection() {
@@ -31,7 +30,6 @@ function ContactSection() {
   }, [controls]);
 
   return (
-    <ParallaxLayer offset={6.3} speed={0} factor={1} className="contact-section">
       <motion.div
         id="contact-section"
         style={{ paddingTop: "1rem" }}
@@ -41,10 +39,10 @@ function ContactSection() {
         transition={{ duration: 0.6, ease: "easeOut" }} // Smooth transition
       >
         <Container className="my-5">
+          <h1 className="mb-4" style={{ color: "white" }}>Send me a message!</h1>
           <ContactForm />
         </Container>
       </motion.div>
-    </ParallaxLayer>
   );
 }
 

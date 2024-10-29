@@ -1,4 +1,3 @@
-import { ParallaxLayer } from "@react-spring/parallax";
 import "./ScrollIndicator.css";
 import { useAnimation, motion } from "framer-motion";
 import { useEffect, useRef } from "react";
@@ -40,7 +39,6 @@ function ScrollIndicator() {
   };
 
   return (
-    <ParallaxLayer offset={0.05} speed={0} factor={0.2}>
       <motion.div
         ref={scrollIndicatorRef}
         initial={{ opacity: 0, y: 50 }} // Hidden initially
@@ -55,7 +53,6 @@ function ScrollIndicator() {
           </div>
         </button>
       </motion.div>
-    </ParallaxLayer>
   );
 }
 
