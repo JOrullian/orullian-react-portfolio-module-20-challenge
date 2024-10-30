@@ -85,8 +85,8 @@ function ProjectsSection() {
         style={{ paddingTop: "1rem" }}
         ref={projectsRef}
         initial={{ opacity: 0, x: -50 }} // Hidden initially
-        animate={controls} // Controlled animation
-        transition={{ duration: 0.6, ease: "easeOut" }} // Smooth transition
+        animate={controls}
+        transition={{ duration: 0.6, ease: "easeOut" }}
       >
         <Container className="my-5 d-flex flex-row justify-content-around">
           <Row

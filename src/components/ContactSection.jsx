@@ -7,7 +7,6 @@ function ContactSection() {
   const controls = useAnimation();
   const contactRef = useRef(null);
 
-  // Start animations only when the section becomes visible
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -20,10 +19,8 @@ function ContactSection() {
       { threshold: 0.3 } // Trigger when 30% of the section is visible
     );
 
-    // Observe the contact section
     if (contactRef.current) observer.observe(contactRef.current);
 
-    // Cleanup observer when component unmounts
     return () => {
       if (contactRef.current) observer.unobserve(contactRef.current);
     };

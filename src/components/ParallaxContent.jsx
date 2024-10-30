@@ -43,6 +43,7 @@ function ParallaxComponent() {
 
   useLayoutEffect(() => {
     const updateParallaxSettings = () => {
+      // Adjust the parallax settings based on screen width
       if (window.innerWidth < 426) {
         setParallaxSettings({
           parallaxOverall: { pages: 7.9 },
@@ -93,6 +94,7 @@ function ParallaxComponent() {
     return () => window.removeEventListener("resize", updateParallaxSettings);
   }, []);
 
+  // Set strength of parallax movement with mouse move
   const calculatePosition = (mouseX, mouseY) => {
     const { x: centerX, y: centerY } = windowCenter;
     return [
@@ -286,11 +288,11 @@ function ParallaxComponent() {
           speed={parallaxSettings.footer.speed}
           factor={parallaxSettings.footer.factor}
           style={{
-            backgroundColor: "black", // Light background for the footer
+            backgroundColor: "black",
             display: "flex",
             justifyContent: "center",
             alignItems: "end",
-            color: "#6c757d", // Secondary text color
+            color: "#6c757d",
           }}
         >
           <Footer />

@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import { useAnimation, motion } from "framer-motion";
-import './Header.css'; // Import the CSS file
+import './Header.css';
 
 function Header() {
   const controls = useAnimation();
@@ -29,13 +29,13 @@ function Header() {
       <motion.div
         ref={headerRef}
         initial={{ opacity: 0, x: 50 }} // Start hidden to the right
-        animate={controls} // Controlled animation
+        animate={controls}
         transition={{ duration: 0.6, ease: "easeOut" }}
         style={{
           position: "absolute",
           right: "10%",
           top: "33%",
-          textAlign: "right", // Align text to the right in the container
+          textAlign: "right",
         }}
       >
         <h1 className="header-title">Jedediah</h1>

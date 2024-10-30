@@ -1,3 +1,60 @@
+# orullian-react-portfolio-module-20-challenge
+
+![screenshot_1](./public/assets/Screenshot%202024-10-30%20110958.png)
+
+![screenshot_2](./public/assets/Screenshot%202024-10-30%20111016.png)
+
+![screenshot_3](./public/assets/Screenshot%202024-10-30%20111029.png)
+
+![screenshot_4](./public/assets/Screenshot%202024-10-30%20111040.png)
+
+![screenshot_5](./public/assets/Screenshot%202024-10-30%20111054.png)
+
+[Jedediah Orullian Portfolio Link](https://majestic-selkie-90b544.netlify.app/#home)
+
+[Github Repo Link](https://github.com/JOrullian/orullian-react-portfolio-module-20-challenge)
+
+## Description
+
+Welcome to my personal portfolio! This project showcases my skills, projects, and experience in web development, complete with smooth animations, interactive design, and a clean, user-friendly interface. Built with React, the portfolio reflects my passion for software development and creativity, presenting a seamless way for visitors to explore my work and reach out to me directly.
+
+To enhance the experience, I’ve integrated EmailJS, allowing users to send messages without leaving the site. Whether you're interested in collaborating, have questions about my work, or just want to connect, you can contact me with ease through the built-in contact form.
+
+In addition, this portfolio leverages animation libraries like react-spring and Framer Motion, delivering engaging transitions, parallax effects, and smooth interactive elements for a polished, modern user experience.
+
+## Features and Functionality
+
+1. Modern UI/UX Design
+    - A clean and intuitive layout that emphasizes accessibility and ease of navigation.
+
+    - Offcanvas navigation menu with active link highlights, ensuring users always know where they are.
+
+2. Animations with React-Spring and Framer Motion
+
+    - React-Spring for smooth parallax scrolling effects, creating depth and immersion as users explore my content.
+
+    - Framer Motion for fluid transitions and micro-interactions, adding subtle visual feedback to improve user engagement.
+
+3. EmailJS Integration for Direct Contact
+
+    - A built-in contact form connected via EmailJS, enabling users to send messages directly from the portfolio.
+
+    - No need for external email clients—conversations can start within seconds.
+
+4. Showcase of Projects and Experience
+
+    - Organized project sections with quick summaries and links to detailed GitHub repositories.
+
+    - Interactive "About Me" and "Resume" sections that provide insights into my background and career journey.
+
+5. Fully Responsive Design
+
+    - Optimized for both desktop and mobile devices, ensuring a consistent experience across screen sizes.
+
+6. External Links to Social Profiles
+
+    - Easy access to my GitHub, LinkedIn, Spotify, and X profiles directly from the navigation menu.
+
 ## Attribution
 
 ### Icons
@@ -59,4 +116,10 @@
 - framer-motion
 - react-bootstrap
 - eslint
+- emailjs
 - vite
+- netlify
+
+Aside from previously mentioned attributions, all code is original and written by Jedediah Orullian
+
+This project is part of an ongoing coding bootcamp

@@ -11,7 +11,6 @@ const TEMPLATE_ID = import.meta.env.VITE_TEMPLATE_ID;
 const PUBLIC_KEY = import.meta.env.VITE_PUBLIC_KEY;
 
 function ContactForm() {
-
   const [email, setEmail] = useState("");
   const [comment, setComment] = useState("");
   const [emailValidated, setEmailValidated] = useState(false);
@@ -42,30 +41,25 @@ function ContactForm() {
   const handleSubmit = (event) => {
     event.preventDefault();
     if (!email || !comment || emailError || commentError) {
-      alert('Please check that you have input a valid email and that the comment section is not empty.');
+      alert(
+        "Please check that you have input a valid email and that the comment section is not empty."
+      );
       return;
-    };
+    }
 
     const templateParams = {
       from_email: email,
       comment: comment,
     };
 
-    emailjs
-      .send(
-        SERVICE_ID,
-        TEMPLATE_ID,
-        templateParams,
-        PUBLIC_KEY
-      )
-      .then(
-        (result) => {
-          alert("Message Sent");
-        },
-        (error) => {
-          alert("Failed to send, please try again");
-        }
-      );
+    emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, PUBLIC_KEY).then(
+      (result) => {
+        alert("Message Sent");
+      },
+      (error) => {
+        alert("Failed to send, please try again");
+      }
+    );
 
     setEmailValidated(true);
   };

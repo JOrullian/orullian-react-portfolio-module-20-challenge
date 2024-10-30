@@ -51,7 +51,6 @@ function ProjectCard({
   );
 }
 
-// Prop validation using PropTypes
 ProjectCard.propTypes = {
   title: PropTypes.string,
   description: PropTypes.string,
