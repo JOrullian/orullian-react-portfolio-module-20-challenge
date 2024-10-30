@@ -6,14 +6,12 @@ import Form from "react-bootstrap/Form";
 import PropTypes from "prop-types";
 
 // Environment variables from netlify UI
-const SERVICE_ID = process.env.REACT_APP_SERVICE_ID;
-const TEMPLATE_ID = process.env.REACT_APP_TEMPLATE_ID;
-const PUBLIC_KEY = process.env.REACT_APP_PUBLIC_KEY;
+const SERVICE_ID = import.meta.env.VITE_SERVICE_ID;
+const TEMPLATE_ID = import.meta.env.VITE_TEMPLATE_ID;
+const PUBLIC_KEY = import.meta.env.VITE_PUBLIC_KEY;
 
 function ContactForm() {
 
-  console.log(SERVICE_ID, TEMPLATE_ID, PUBLIC_KEY);
-  
   const [email, setEmail] = useState("");
   const [comment, setComment] = useState("");
   const [emailValidated, setEmailValidated] = useState(false);
