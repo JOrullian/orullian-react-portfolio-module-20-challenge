@@ -1,0 +1,28 @@
+.header-title {
+  color: white;
+  margin: 0;
+  font-size: 8rem;
+  margin-bottom: 5px;
+  text-align: right;
+}
+
+/* Desktop */
+@media (max-width: 1440px) {
+  .header-title {
+    font-size: 6rem;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .header-title {
+    font-size: 3rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .header-title {
+    font-size: 2rem;
+  }
+}
