@@ -7,7 +7,7 @@ redirects = []
 [functions."*"]
 
 [build]
-publish = "C:\\Users\\jeded\\OneDrive\\desktop\\classwork\\challenges\\module-20\\dist"
+publish = "C:\\Users\\jeded\\OneDrive\\Desktop\\classwork\\challenges\\module-20\\dist"
 publishOrigin = "ui"
 commandOrigin = "ui"
 command = "npm run build"
